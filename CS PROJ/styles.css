@@ -1,0 +1,200 @@
+* {
+    margin: 0;
+}
+
+/* fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@700&display=swap');
+
+@font-face {
+    font-family: Helvetica;
+    src: url(helvetica/NewHelvetica-Regular.otf);
+}
+
+@font-face {
+    font-family: Antigoni;
+    src: url(Antigoni/antigonilight.ttf);
+}
+
+/* applied to all pages */
+
+body {
+    background-color: #ffec5d;
+}
+
+/* header */
+nav {
+    background: -webkit-linear-gradient(left, #f9e8ab, #faf147, #f7d35b, #e59b56, #e38901);
+    font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 12vh;
+    z-index: 5;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin-left: 50px;
+    text-align: center;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fafaf3;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.a {
+    height: 5vh;
+    width: 8vw;
+}
+
+.a a{
+    font-size: 15px;
+    color: #8b2500;
+}
+
+nav p {
+    margin-right: 55vw;
+    font-size: 5vh;
+    color: #c36806;
+}
+
+nav p span {color: #fafaf3;}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.a:hover {
+    background-color: #fafaf3;
+}
+
+nav a{text-decoration: none; color: #fafaf3;}
+
+#nav {color: #fafaf3; font-size: larger;}
+
+/* page 1 - banner */
+.bannertitle {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    color: #ff4f03;
+    font-size: 70px;
+    text-align: center;
+    padding-top: 30vh;
+}
+
+#video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: fixed;
+    z-index:-1; 
+}
+
+/* page 1 - background */
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.1em;
+    /*display: grid;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 0.1fr;
+    column-gap: 5px;
+    padding: 1em; */
+}
+
+#picbg {
+    padding: 3em;
+    animation-name: intro;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; /* loop */
+    /*padding-right: 20px;
+    display: flex;
+    justify-content: right;*/
+}
+
+#txtbg {
+     font-size: x-large;
+    padding-left: 20px;
+    /* display: flex;
+    justify-content: left;*/
+    font-family: Helvetica;
+}
+
+/* page 3 - mission & vision */
+/*.v_line {
+    border-left: 1px solid rgb(0, 0, 0);
+    height: 500px;
+    margin: 0 auto;
+    width: 2px;
+} */
+
+.ms {font-family: Oswald; font-size: x-large;}
+#ms {font-family: Dosis; font-size: x-large;}
+
+#mission {
+    color:#f78400;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 5em;
+    padding-right: 50em;
+    padding-left: 2em;
+}
+
+#vision {
+    color:#f78400;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-left: 50em;
+}
+
+#vision .ms {padding-top: 2em; text-align: center;}
+#mission .ms {padding-top: 2em; text-align: center;}
+
+/* page 3 - how to help */
+
+#be {font-family: Oswald; font-size: xx-large; text-align: center; padding-top: 2vh;}
+#our {color:#ce770e;}
+#oceans {color: #f78400;}
+#email {text-decoration: underline;}
+
+.contact {
+    font-family: Dosis;
+    font-size: x-large;
+    padding-left: 2vw;
+}
+
+#partner {color: #120966;}
+#contribute {color: #120966;}
+#volunteer {color: #120966;}
+
+/* footer */
+
+footer {
+    background: -webkit-linear-gradient(left, #f9e8ab, #faf147, #f7d35b, #e59b56, #e38901);
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 13vh;
+    z-index: 5;
+}
+
+footer p {margin-right: 60vw;}
