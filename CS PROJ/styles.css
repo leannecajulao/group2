@@ -23,9 +23,21 @@ body {
     background-color: #ffec5d;
 }
 
+.bgofms {
+    background-image: url(media/Eco-groups-IPs-decry-NCIPs-silence-on-lumad-killings.jpeg); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-attachment: fixed; 
+            margin: 0; 
+            padding: 0; 
+            height: 100vh; 
+            color: white; 
+}
+
 /* header */
 nav {
-    background: -webkit-linear-gradient(left, #f9e8ab, #faf147, #f7d35b, #e59b56, #e38901);
+    background: -webkit-linear-gradient(left, #c36806, #faf147, #f7d35b, #e59b56, #e38901);
     font-family: 'Oswald', sans-serif;
     display: flex;
     flex-direction: row;
@@ -35,6 +47,8 @@ nav {
     height: 12vh;
     z-index: 5;
 }
+
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -46,7 +60,7 @@ nav {
     display: none;
     position: absolute;
     background-color: #fafaf3;
-    box-shadow: 0px 8px 16px 0px rgba(235, 127, 4, 0.815);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
@@ -84,7 +98,7 @@ nav a{text-decoration: none; color: #fafaf3;}
 .bannertitle {
     font-family: 'Times New Roman', Times, serif;
     font-style: bold;
-    color: #ffe8af;
+    color: #ff4f03;
     font-size: 70px;
     text-align: center;
     padding-top: 30vh;
@@ -128,7 +142,7 @@ nav a{text-decoration: none; color: #fafaf3;}
     padding-left: 20px;
     /* display: flex;
     justify-content: left;*/
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Helvetica;
 }
 
 /* page 3 - mission & vision */
@@ -139,13 +153,11 @@ nav a{text-decoration: none; color: #fafaf3;}
     width: 2px;
 } */
 
-.ms {font-family: Oswald; font-size: x-large;}
+.ms {font-family: Oswald; font-size: x-large; font-weight: bolder;}
 #ms {font-family: Dosis; font-size: x-large;}
 
 #mission {
-    color:#ef7700;
-    display: flex;
-    flex-direction: column;
+    color:white;
     justify-content: flex-start;
     padding-top: 5em;
     padding-right: 50em;
@@ -153,9 +165,7 @@ nav a{text-decoration: none; color: #fafaf3;}
 }
 
 #vision {
-    color:#ef7700;
-    display: flex;
-    flex-direction: column;
+    color:white;
     justify-content: flex-end;
     padding-left: 50em;
 }
@@ -166,8 +176,8 @@ nav a{text-decoration: none; color: #fafaf3;}
 /* page 3 - how to help */
 
 #be {font-family: Oswald; font-size: xx-large; text-align: center; padding-top: 2vh;}
-#our {color:#00008b;}
-#oceans {color: #120966;}
+#our {color:#ce770e;}
+#oceans {color: #f78400;}
 #email {text-decoration: underline;}
 
 .contact {
@@ -198,3 +208,4 @@ footer {
 }
 
 footer p {margin-right: 60vw;}
+
