@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LumadUprise</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <img src="media/logo.jpg" height="50" alt="LumadUprise Logo">
+        <p>LumadUprise</p>
+        <div class="dropdown">
+            <a href="index.html">HOME</a>
+            <div class="dropdown-content">
+                <a href="backpage1.html">BACKGROUND</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="index3.html">ABOUT US</a>
+            <div class="dropdown-content">
+                <a href="index3.html">MISSION</a>
+                <a href="index3.html">VISION</a>
+                <a href="helppage3.html">HOW TO HELP</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="signup-container">
+            <form id="userform" onsubmit="processInfo(event)">
+                <fieldset id="firstbox">
+                    <legend>Sign-up</legend>
+                    <div class="form-group inline">
+                        <div>
+                            <label for="fn">First Name</label>
+                            <input value= "first name" type="text" id="fn" name="firstName" onblur="borderRed(this)" onfocus="borderGreen(this)">
+                        </div>
+                        <div>
+                            <label for="ln">Last Name</label>
+                            <input value= "last name" type="text" id="ln" name="lastName" onblur="borderRed(this)" onfocus="borderGreen(this)">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="em">Email</label>
+                        <input type="email" id="em" name="email" class="black-textbox" onblur="borderRed(this)" onfocus="borderGreen(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact">Contact Number</label>
+                        <input type="number" id="contact" name="contactnum" class="black-textbox" onblur="borderRed(this)" onfocus="borderGreen(this)">
+                    </div>
+                    <div class="form-group">
+                        <label for="pass">Password</label>
+                        <input type="password" id="pass" name="password" class="black-textbox" onfocus="borderGreen(this)" >
+                    </div>
+                    <div class="form-group">
+                        <label for="sup">Why do I support this campaign?</label>
+                        <textarea id="sup" name="support" onblur="borderRed(this)" onfocus="borderGreen(this)"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="gn">Sex</label>
+                        <select name="gender" id="gn" class="black-textbox" onblur="borderRed(this)" onfocus="borderGreen(this)">
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                            <option value="Prefer not to say">Prefer Not To Say</option>
+                        </select>
+                    </div>
+                    
+                </fieldset>
+                <input type="submit" value="Sign-up" class="black-textbox" id="submit">
+            </form>
+        </div>
+        <div id="overlay"></div>
+        <div id="display"></div>    
+    </main>
+
+    <footer>
+        <p>LumadUprise. ALL RIGHTS RESERVED 2024</p>
+    </footer>
+
+    <script>
+
+        
+        document.getElementById("userform").addEventListener('submit', function(event){
+            const fhtml = document.getElementById("fn").value;
+            const shtml = fhtml;
+            localStorage.setItem("fn", "firstName");
+
+            const lhtml = document.getElementById("ln").value;
+            const zhtml = lhtml;
+            localStorage.setItem("ln", "lastName");
+
+            const ehtml = document.getElementById("em").value;
+            const xhtml = ehtml;
+            localStorage.setItem("em", "email");
+
+            const phtml = document.getElementById("pass").value;
+            const chtml = phtml;
+            localStorage.setItem("pass", "password");
+
+            const ghtml = document.getElementById("gn").value;
+            const vhtml = ghtml;
+            localStorage.setItem("gn", "gender");
+        })
+        
+
+
+        
+       function processInfo(event) {
+        event.preventDefault();
+
+        var fullName = document.getElementById('fn').value;
+        var lastName = document.getElementById('ln').value;
+        var email = document.getElementById('em').value;
+        var password = document.getElementById('pass').value;
+        var gender = document.getElementById('gn').value;
+
+        var datas = {
+            fullName: fullName,
+            lastName: lastName,
+            email: email,
+            password: password,
+            gender: gender
+        };
+
+        var jsonData = JSON.stringify(datas);
+        localStorage.setItem('userData', jsonData);
+
+        var presentdatas = document.getElementById('display');
+        if (presentdatas) {
+            presentdatas.innerHTML = JSON.stringify(datas);
+        }
+
+        window.location.href = "page1.html";
+}
+
+    
+        function borderRed(element) {
+            if (element.value.trim() === '') {
+                element.style.border = "2px solid red";
+                element.style.fontWeight = "bold";
+            } else {
+                element.style.border = "2px solid lime";
+                element.style.fontWeight = "bold";
+            }
+        }
+    
+        function borderGreen(element) {
+            element.style.border = "2px solid lime";
+            element.style.fontWeight = "bold";
+        }
+    
+        function res() {
+            var display = document.getElementById("display");
+            if (display) {
+                display.innerHTML = '';
+            }
+        }
+    </script>
+</body>
+</html>
