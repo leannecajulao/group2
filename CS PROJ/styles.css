@@ -173,6 +173,22 @@ nav a{text-decoration: none; color: #fafaf3;}
 #vision .ms {padding-top: 2em; text-align: center;}
 #mission .ms {padding-top: 2em; text-align: center;}
 
+/* page 3 - how to help */
+
+#be {font-family: Oswald; font-size: xx-large; text-align: center; padding-top: 2vh;}
+#our {color:#ce770e;}
+#oceans {color: #f78400;}
+#email {text-decoration: underline;}
+
+.contact {
+    font-family: Dosis;
+    font-size: x-large;
+    padding-left: 2vw;
+}
+
+#partner {color: #120966;}
+#contribute {color: #120966;}
+#volunteer {color: #120966;}
 
 /* footer */
 
@@ -193,70 +209,131 @@ footer {
 
 footer p {margin-right: 60vw;}
 
-form {
-    background-color: #2c2c2c;
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 450px;
-    height: 500px;
-    margin-bottom: 50px;
-    color: white;
+    padding-bottom: 16vh;
+    background-image: url(media/bgsignup.png);
 }
 
-.form-group {
+.signup-container {
+    width: 400px;
+    background-color: #f7facd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    font-family: Arial, Helvetica, sans-serif;
+    color: #966e08;
+}
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+legend {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 25px;
+
+}
+
+.group {
     margin-bottom: 15px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 500;
-}
-
-.form-group.inline {
-    width: 350px;
-    padding: 10px;
-    margin-bottom: 10px;
-    color: rgb(255, 255, 255);
-}
-
-#em, #contact, #pass, #sup{
-    width: 360px    ;
-}
-
-button {
-    width: 100px;
-    padding: 15px;
-    background-color: #e50914;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #f6121d;
-}
-.form-group.inline {
+.group.inline {
     display: flex;
     justify-content: space-between;
 }
 
-.form-group.inline div {
-    flex: 1;
-    margin-right: 10px;
+.group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.form-group.inline div:last-child {
-    margin-right: 0;
+.group input,
+.group select,
+.group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
 }
 
-audio {
-    display: none;
-    
+.group.inline div {
+    width: 48%;
 }
 
+textarea {
+    resize: vertical;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #e5e0c0;
+    color: #966e08;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: #a89c41;
+    color: white;
+}
+
+.prof-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7facd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: helvetica;
+}
+
+.prof-container h1 {
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    color: #966e08;
+    margin-bottom: 20px;
+}
+
+.prof-content {
+    font-family: 'Dosis', sans-serif;
+    font-size: 18px;
+    color: #5c4715;
+}
+
+.prof-content p {
+    margin-bottom: 10px;
+
+}
+
+.prof-content strong {
+    color: #5c4715;
+}
+
+.welcome h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    font-family: 'oswald';
+    color: #5c4715;
+}
