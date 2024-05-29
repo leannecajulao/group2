@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LumadUprise</title>
     <link rel="stylesheet" href="styles.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Dosis&family=Oswald:wght@700&display=swap" rel="stylesheet">
 </head>
@@ -37,6 +38,8 @@
         <div id="userData" class="prof-content"></div>
     </div>
 
+    <script src="infopage.js"></script>
+
     
   
 
@@ -44,27 +47,6 @@
         <p>LumadUprise. ALL RIGHTS RESERVED 2024</p>
     </footer>
 
-    <script>
-
-    var userDataString = localStorage.getItem('userData');
-    var userData = JSON.parse(userDataString);
-
-    // Check if userData is null or undefined
-    if(userData) {
-        // Display user data on the page
-        var userDataDiv = document.getElementById('userData');
-        userDataDiv.innerHTML = `
-            <p><strong>First Name:</strong> ${userData.firstName}</p>
-            <p><strong>Last Name:</strong> ${userData.lastName}</p>
-            <p><strong>Email:</strong> ${userData.email}</p>
-            <p><strong>Gender:</strong> ${userData.gender}</p>
-            <p><strong>Contact Number:</strong> ${userData.contactnum || "N/A"}</p>
-            <p><strong>Support:</strong> ${userData.support}</p>
-        `;
-    } else {
-        console.log("No user data found in local storage.");
-    }
-</script>
 
 
 
